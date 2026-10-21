@@ -1,0 +1,1 @@
+# Armazena o controle das alterações estruturais realizadas no banco
