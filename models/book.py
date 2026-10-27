@@ -4,7 +4,8 @@
 from uuid import uuid4 
 from sqlalchemy import String, Text
 from sqlalchemy.dialects.postgresql import UUID 
-from db import db 
+from db import db
+
 
 class Book(db.Model):
 # Indica que book é um odelo gerenciado pelo SQLAlchemy
@@ -19,7 +20,7 @@ class Book(db.Model):
         String(255), # Recebe a string
         nullable = False, # Não aceita nulo 
     )
-    author = db.Colunm(
+    author = db.Column(
         String(255),
         nullable = False
     )
@@ -29,19 +30,19 @@ class Book(db.Model):
         nullable = False 
     )
 
-    is_favorite = db.Colunm(
+    is_favorite = db.Column(
         db.Boolean,
         nullable = False,
         default = False
     )
 
-    is_reading = db.Colunm(
+    is_reading = db.Column(
         db.Boolean,
         nullable = False,
         default = False
     )
 
-    is_finished = db.Colunm(
+    is_finished = db.Column(
         db.Boolean,
         nullable = False,
         default = False
